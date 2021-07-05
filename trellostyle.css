@@ -1,0 +1,316 @@
+body {
+    font-family: 'Concert One', cursive;
+}
+
+.menu-wrapper {
+    margin-left: .6rem;
+}
+
+.menu-button {
+    position: absolute;
+    font-size: 2.5rem;
+    top: 1rem;
+    color: #9494b8;
+    /* margin-left: .5rem; */
+    z-index: 8;
+}
+
+.navigation-wrapper {
+    position: absolute;
+    top: .5rem;
+    /* width: 15%;
+    height: 60%; */
+}
+
+.navigation-bar {
+    right: 20rem;
+    position: relative;
+    border: 1px #8585ad solid;
+    background-color: #e0e0eb;
+    width: 14.3rem;
+    height: 24rem;
+    border-radius: 3px;
+    transition: all .7s ease;
+}
+
+.opened {
+    right: 0;
+}
+
+.link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25rem;
+}
+
+.link-wrapper p {
+    margin: -3rem;
+}
+
+a {
+    font-size: 1.2rem;
+    display: none;
+    color: black;
+    text-decoration: none;
+}
+
+
+.board-container {
+    display: flex;
+    /* margin-left: 12rem; */
+    justify-content: center;
+    width: 100%;
+}
+
+.app-title {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #3385ff;
+    font-size: 2.4rem;
+}
+
+.app-title::before {
+    content: '\1F4BB  '
+}
+
+.new-column-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.new-column-button {
+    font-size: .9rem;
+    padding: .3rem;
+    border-radius: 6px;
+    font-family: 'Concert One', cursive;
+}
+
+.column-wrapper {
+    display: flex;;
+    /* margin-left: 2rem; */
+    width: 100%;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    margin-right: .1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: #c2c2d6 3px solid;
+    border-radius: 6px;
+    width: 15%;
+    height: 80vh;
+    text-align: center;
+    overflow: auto;
+}
+
+.column-header {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.applied-header::before {
+    content: '\1F4E9  ';
+}
+
+.screening-header::before {
+    content: '\1F4DE  ';
+}
+
+.interviewing-header::before {
+    content: '\1F454  ';
+}
+
+.completed-header::before {
+    content: '\1F64C  ';
+}
+
+.button-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.col-add-button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin: .5rem;
+    color: #33cc33;
+    transition: all .3s ease-in-out;
+}
+
+.col-add-button:hover {
+    font-size: 1.2rem;
+}
+
+.new-job {
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 47.65%; 
+    transform: translate(-40%, -55%) scale(0);
+    transition: 200ms ease-in-out;
+    border: #c2c2d6 3px solid;
+    z-index: 10;
+    background-color: white;
+    width: 400px; 
+    max-width: 80%;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.modal.active {
+    transform: translate(-40%, -55%) scale(1);
+}
+
+.modal-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.close-button:hover {
+    color: #ff4d4d;
+}
+
+.new-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#new-job-button {
+    margin-right: 2rem;
+    padding: .4rem .8rem .4rem .8rem;
+    border: black 1.5px solid;
+    border-radius: 7px;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all ease .3s;
+    font-family: 'Concert One', cursive;
+}
+
+#new-job-button:hover {
+    color: #33cc33;
+    border: #33cc33 1.5px solid;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+label {
+    margin-left: 1.5rem;
+}
+
+input {
+    display: block;
+    font-size: .9rem;
+    margin-top: .5rem;
+    margin-bottom: .4rem;
+    margin-left: 1.5rem;
+    width: 60%;
+    font-family: 'Concert One', cursive;
+}
+
+select {
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .4rem;
+    margin-left: 1.5rem;
+    width: 62%;
+    font-family: 'Concert One', cursive;
+}
+
+
+
+.applied-col-wrapper, .screening-col-wrapper, .interviewing-col-wrapper, .completed-col-wrapper  {
+    width: 100%;
+}
+
+.card-wrapper {
+    height: 100%;
+}
+
+.card {
+    display: inline-block;
+    border: #66b3ff 2px solid;
+    margin: .6rem;
+    padding: .5rem;
+    border-radius: 14px;
+    width: 65%;
+    padding: .5rem;
+}
+
+.high {
+    border: #ffad33 2px solid;
+}
+
+.medium {
+    border: #66b3ff 2px solid;;
+}
+
+.low {
+    border: #5cd65c 2px solid;;
+}
+
+#text {
+    display: inline-block;
+    width: 100%;
+}
+
+.delete-button {
+    display: inline-block;
+    
+    color: #c2c2d6;
+    /* width: 100%;  */
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.delete-button:hover {
+    font-size: 1.25rem;
+    color: #ff4d4d;
+}

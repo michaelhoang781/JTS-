@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trellostyle.css">
+    <script src="https://kit.fontawesome.com/3f55a74825.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>Dev Job Tracker</title>
+</head>
+
+<body>
+    <h1 class="app-title">DEV JOB TRACKER</h1>
+
+    <!-- Navigation Menu Start -->
+
+    <div class="menu-wrapper">
+        <i class="fas fa-bars menu-button"></i>
+    </div>
+
+    <div class="navigation-wrapper">
+        <div class="navigation-bar">
+            <div class="link-wrapper">
+                <a href="#">PROFILE</a>
+                <p>---</p>
+                <a href="#">DATA</a>
+                <p>---</p>
+                <a href="#">HELP</a>
+                <p>---</p>
+                <a href="#">LOG OUT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu End -->
+
+    <!-- <div class="new-column-wrapper">
+        <button class="new-column-button"> New Column </button>
+    </div> -->
+
+    <div class="board-container">
+
+        <!-- Pop-up Window Start -->
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Add New Opportunity</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" class="new-job-form">
+                    <label for="jobName">Position Title</label>
+                    <input type="text" id="jobName" name="jobName" value="New Position">
+                    <label for="location">Company</label>
+                    <input type="text" id="Company" name="Company">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location">
+                    <label for="location">Salary</label>
+                    <input type="text" id="salary" name="salary">
+                    <label for="type">Type</label>
+                    <select id="type">
+                        <option value="full-time">Full-time</option>
+                        <option value="contract">Contract</option>
+                        <option value="freelance">Freelance</option>
+                    </select>
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="high">High</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+
+                </form>
+                <div class="new-button-wrapper">
+                    <button data-close-button id="new-job-button">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+
+        <!-- Pop-up Window End -->
+
+        <!-- Columns Start -->
+
+        <div class="column-wrapper">
+            <div class="column applied-col">
+                <div class="applied-col-wrapper">
+                    <div class="button-wrapper">
+                        <div class="col-add-button"><i class="fas fa-plus-circle new-job col-1-add open-modal-1"></i>
+                        </div>
+                    </div>
+                    <h3 class="column-header applied-header">APPLIED</h3>
+                    <div class="card-wrapper applied-cards" ondragover="onDragOver(event);"
+                        ondrop="onDrop(event, this);">
+
+                    </div>
+                </div>
+            </div>
+            <div class="column screening-col">
+                <div class="screening-col-wrapper">
+                    <div class="button-wrapper">
+                        <div class="col-add-button"><i class="fas fa-plus-circle new-job col-2-add open-modal-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="column-header screening-header">SCREENING</h3>
+                    <div class="card-wrapper screening-cards" ondragover="onDragOver(event);"
+                        ondrop="onDrop(event, this);">
+
+                    </div>
+                </div>
+            </div>
+            <div class="column interview-col">
+                <div class="interviewing-col-wrapper">
+                    <div class="button-wrapper">
+                        <div class="col-add-button"><i class="fas fa-plus-circle new-job col-3-add open-modal-3"></i>
+                        </div>
+                    </div>
+                    <h3 class="column-header interviewing-header">INTERVIEWING</h3>
+                    <div class="card-wrapper interviewing-cards" ondragover="onDragOver(event);"
+                        ondrop="onDrop(event, this);">
+
+                    </div>
+                </div>
+            </div>
+            <div class="column completed-col">
+                <div class="completed-col-wrapper">
+                    <div class="button-wrapper">
+                        <div class="col-add-button"><i class="fas fa-plus-circle new-job col-4-add open-modal-4"></i>
+                        </div>
+                    </div>
+                    <h3 class="column-header completed-header">COMPLETED</h3>
+                    <div class="card-wrapper completed-cards" ondragover="onDragOver(event);"
+                        ondrop="onDrop(event, this);">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Columns End -->
+
+    <script src="TrelloClone.js"></script>
+</body>
+
+</html>
