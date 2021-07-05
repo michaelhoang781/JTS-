@@ -284,6 +284,10 @@ select {
     padding: .5rem;
 }
 
+.card:hover {
+    font-size: .9rem;
+}
+
 .high {
     border: #ffad33 2px solid;
 }
