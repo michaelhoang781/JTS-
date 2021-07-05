@@ -282,6 +282,7 @@ select {
     border-radius: 14px;
     width: 65%;
     padding: .5rem;
+    transition: all .3s ease-in-out;
 }
 
 .card:hover {
